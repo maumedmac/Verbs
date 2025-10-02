@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".RandomVerbActivity">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Verbo Aleatorio"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <TextView
+        android:id="@+id/textViewBaseFormLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forma Base:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <TextView
+        android:id="@+id/textViewBaseForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        tools:text="Be"
+        app:layout_constraintTop_toTopOf="@id/textViewBaseFormLabel"
+        app:layout_constraintStart_toEndOf="@id/textViewBaseFormLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/textViewPastTenseLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pasado Simple:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textViewBaseForm"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewPastTense"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        tools:text="Was/Were"
+        app:layout_constraintTop_toTopOf="@id/textViewPastTenseLabel"
+        app:layout_constraintStart_toEndOf="@id/textViewPastTenseLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/textViewPastParticipleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pasado Participio:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textViewPastTense"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewPastParticiple"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        tools:text="Been"
+        app:layout_constraintTop_toTopOf="@id/textViewPastParticipleLabel"
+        app:layout_constraintStart_toEndOf="@id/textViewPastParticipleLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"/>
+
+    <TextView
+        android:id="@+id/textViewDescriptionLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Significado:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/textViewPastParticiple"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        tools:text="Ser o estar"
+        app:layout_constraintTop_toTopOf="@id/textViewDescriptionLabel"
+        app:layout_constraintStart_toEndOf="@id/textViewDescriptionLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"/>
+
+    <Button
+        android:id="@+id/buttonNextVerb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Siguiente Verbo Aleatorio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Opcional: FAB para hablar el verbo actual -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSpeakRandomVerb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:srcCompat="@android:drawable/ic_btn_speak_now"
+        app:layout_constraintBottom_toTopOf="@id/buttonNextVerb"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="Leer verbo en voz alta"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
