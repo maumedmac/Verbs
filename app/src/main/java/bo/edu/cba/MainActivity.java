@@ -24,36 +24,34 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
         Button vocabularyButton = findViewById(R.id.button);
-        vocabularyButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, VerbsActivity.class);
-                startActivity(intent);
-            }
+        vocabularyButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, VerbsActivity.class);
+            startActivity(intent);
         });
         Button randomButton = findViewById(R.id.button2);
-        randomButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, RandomVerbActivity.class);
-                startActivity(intent);
-            }
+        randomButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, RandomVerbActivity.class);
+            startActivity(intent);
         });
         Button ListButton = findViewById(R.id.button3);
-        ListButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ListVerbs.class);
-                startActivity(intent);
-            }
+        ListButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ListVerbs.class);
+            startActivity(intent);
         });
         Button PracticeButton = findViewById(R.id.button4);
-        PracticeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, PracticeActivity.class);
-                startActivity(intent);
-            }
+        PracticeButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, PracticeActivity.class);
+            startActivity(intent);
+        });
+        Button SentenseButton = findViewById(R.id.button5);
+        SentenseButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, SentenceActivity.class);
+            startActivity(intent);
+        });
+        Button PracticeSentenseButton = findViewById(R.id.button6);
+        PracticeSentenseButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, PracticeSentencesActivity.class);
+            startActivity(intent);
         });
 
             }

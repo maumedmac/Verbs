@@ -109,7 +109,7 @@ public class ListVerbs extends AppCompatActivity implements TextToSpeech.OnInitL
         if (verb != null) {
             textViewBaseForm.setText(verb.getBaseForm());
             textViewPastTense.setText(verb.getPastTense());
-            textViewPastParticiple.setText(verb.getPastParticipie());
+            textViewPastParticiple.setText(verb.getPastParticiple());
             textViewDescription.setText(verb.getDescription());
         }
     }
@@ -130,7 +130,7 @@ public class ListVerbs extends AppCompatActivity implements TextToSpeech.OnInitL
         if (isTtsInitialized) {
             String textoParaLeer = currentVerb.getBaseForm() + ",   " +
                     currentVerb.getPastTense() + ",  " +
-                    currentVerb.getPastParticipie();
+                    currentVerb.getPastParticiple();
             speakOut(textoParaLeer);
         } else {
             Toast.makeText(this, "Text-to-Speech no está listo.", Toast.LENGTH_SHORT).show();

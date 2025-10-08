@@ -101,7 +101,7 @@ public class RandomVerbActivity extends AppCompatActivity implements TextToSpeec
         if (verb != null) {
             textViewBaseForm.setText(verb.getBaseForm());
             textViewPastTense.setText(verb.getPastTense());
-            textViewPastParticiple.setText(verb.getPastParticipie());
+            textViewPastParticiple.setText(verb.getPastParticiple());
             textViewDescription.setText(verb.getDescription());
         }
     }
@@ -115,7 +115,7 @@ public class RandomVerbActivity extends AppCompatActivity implements TextToSpeec
         if (isTtsInitialized) {
             String textoParaLeer = currentRandomVerb.getBaseForm() + ",   " +
                     currentRandomVerb.getPastTense() + ",  " +
-                    currentRandomVerb.getPastParticipie(); // Quitada la "i" extra
+                    currentRandomVerb.getPastParticiple(); // Quitada la "i" extra
             // Opcional: añadir la descripción a la lectura
             // textoParaLeer += ". Significado: " + currentRandomVerb.getDescription();
             speakOut(textoParaLeer);

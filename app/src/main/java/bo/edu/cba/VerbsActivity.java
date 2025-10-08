@@ -69,7 +69,7 @@ public class VerbsActivity extends AppCompatActivity implements TextToSpeech.OnI
                     if (isTtsInitialized) {
                         String textoParaLeer = objetoSeleccionado.getBaseForm() +",   "+
                                 objetoSeleccionado.getPastTense() +",  "+
-                                objetoSeleccionado.getPastParticipie();
+                                objetoSeleccionado.getPastParticiple();
                         // Opcional: añadir la descripción a la lectura
                         // textoParaLeer += ". Meaning: " + objetoSeleccionado.getDescription();
                         speakOut(textoParaLeer);

@@ -46,7 +46,7 @@ public class VerbAdapter extends ArrayAdapter<Verb> {
                 holder.textPastTense.setText(currentVerb.getPastTense());
             }
             if (holder.textPastParticiple != null) {
-                holder.textPastParticiple.setText(currentVerb.getPastParticipie());
+                holder.textPastParticiple.setText(currentVerb.getPastParticiple());
             }
         }
 

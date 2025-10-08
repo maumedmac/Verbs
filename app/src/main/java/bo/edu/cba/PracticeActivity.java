@@ -124,8 +124,8 @@ public class PracticeActivity extends AppCompatActivity implements TextToSpeech.
         boolean isPastTenseCorrect = correctVerb.getPastTense().equalsIgnoreCase(pastTenseAnswer) ||
                 correctVerb.getPastTense().toLowerCase().contains(pastTenseAnswer.toLowerCase());
 
-        boolean isPastParticipleCorrect = correctVerb.getPastParticipie().equalsIgnoreCase(pastParticipleAnswer) ||
-                correctVerb.getPastParticipie().toLowerCase().contains(pastParticipleAnswer.toLowerCase());
+        boolean isPastParticipleCorrect = correctVerb.getPastParticiple().equalsIgnoreCase(pastParticipleAnswer) ||
+                correctVerb.getPastParticiple().toLowerCase().contains(pastParticipleAnswer.toLowerCase());
 
         editTextPastTense.setBackgroundColor(isPastTenseCorrect ? Color.parseColor("#A5D6A7") : Color.parseColor("#EF9A9A"));
         editTextPastParticiple.setBackgroundColor(isPastParticipleCorrect ? Color.parseColor("#A5D6A7") : Color.parseColor("#EF9A9A"));
@@ -137,7 +137,7 @@ public class PracticeActivity extends AppCompatActivity implements TextToSpeech.
             if (isTtsInitialized) {
                 String textoParaLeer = correctVerb.getBaseForm() + ",   " +
                         correctVerb.getPastTense() + ",  " +
-                        correctVerb.getPastParticipie();
+                        correctVerb.getPastParticiple();
                 speakOut(textoParaLeer);
             } else {
                 Toast.makeText(this, "TTS no está listo.", Toast.LENGTH_SHORT).show();
